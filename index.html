@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="订单经营分析前端演示：模拟订单、发货、退货与回款数据，支持筛选、图表、明细和CSV导出。">
+  <title>FlowLens · 订单经营分析演示</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <header class="topbar"><button id="menu" class="icon-button" aria-label="展开或收起侧栏">☰</button><a class="brand" href="#overview"><span class="brand-symbol">F</span>FlowLens</a><div class="breadcrumb">订单经营工作台 <span>/</span> <strong id="current-page">经营概览</strong></div><span class="demo-pill"><i></i> 模拟数据演示</span><span class="avatar" title="公开演示，无需登录">访</span></header>
+  <aside class="sidebar" aria-label="页面导航"><div class="nav-caption">工作空间</div><nav id="navigation"></nav><div class="sidebar-note"><span class="mini-label">PORTFOLIO DEMO</span><strong>从订单到回款</strong><p>数据、客户与产品均为虚构。<br>无需登录，即可体验。</p><button id="reset" class="text-button">重置演示条件 ↗</button></div></aside>
+  <main id="workspace">
+    <div class="page-heading"><div><span class="eyebrow">BUSINESS INSIGHTS / 2026</span><h1 id="page-title">经营概览</h1><p id="page-description"></p></div><span class="outline-pill">公开体验 · 不连接业务系统</span></div>
+    <form id="filters" class="filter-bar"><label>客户<select id="customer" aria-label="筛选客户"></select></label><label>月份<select id="from-month" aria-label="起始月份"></select><span class="range-separator">—</span><select id="to-month" aria-label="结束月份"></select></label><label class="search-label"><span class="search-icon">⌕</span><input id="search" aria-label="搜索订单客户或产品" placeholder="搜索订单、客户或产品"></label><button class="primary" type="submit">应用筛选</button></form>
+    <div id="scope" class="scope" aria-live="polite"></div>
+    <section id="content" aria-live="polite"></section>
+    <footer>FlowLens · 订单经营分析演示<span>所有数字由模拟明细实时计算 · 仅供作品展示</span></footer>
+  </main>
+  <dialog id="detail"><div class="dialog-heading"><div><span class="eyebrow">ORDER DETAIL</span><h2>模拟订单明细</h2></div><button id="close-detail" class="icon-button" aria-label="关闭订单明细">×</button></div><div id="detail-body"></div></dialog>
+  <noscript><p class="noscript">请启用 JavaScript 以体验交互看板。</p></noscript>
+  <script src="./assets/data.js"></script><script src="./assets/charts.js"></script><script src="./assets/app.js"></script>
+</body>
+</html>
