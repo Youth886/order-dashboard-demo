@@ -2,6 +2,8 @@
 
 这是从本地订单看板的使用场景独立整理的**纯前端演示版**，用于作品集与简历展示。它不是公司正式系统的完整备份，不包含真实企业数据或内部账号。
 
+在线演示：[打开 FlowLens 看板](https://youth886.github.io/order-dashboard-demo/)
+
 ## 能体验什么
 
 - 经营概览：月度趋势、客户贡献、订单类型及资金概况。
@@ -23,10 +25,10 @@
 1. 在自己的 GitHub 账号中创建一个公开仓库，例如 `order-dashboard-demo`。
 2. **仅上传本演示目录的内容**，确保仓库根目录是 `index.html` 和 `assets/`。不要上传上一级的正式系统、Excel、密钥、日志或账号文件。
 3. 最简单的方式：仓库 **Settings → Pages → Build and deployment**，选择 **Deploy from a branch**，分支选 `main`，目录选 `/ (root)`，保存。
-4. 如果希望使用随附的自动部署工作流，则在 Pages 中选择 **GitHub Actions**；`.github/workflows/pages.yml` 会在推送 `main` / `master` 后部署。两种方式选一种即可。
+4. 本仓库采用分支直接发布；更新 `main` 分支中的网页文件后，GitHub 会自动重新部署。
 5. 部署成功后，Pages 页面会给出链接，一般是 `https://你的用户名.github.io/order-dashboard-demo/`。
 
-发布后由 GitHub 托管，自己的电脑关闭也可访问，不需要 ngrok、内网穿透或自行购买服务器。本目录当前只完成本地准备，**尚未上传或发布**。
+发布后由 GitHub 托管，自己的电脑关闭也可访问，不需要 ngrok、内网穿透或自行购买服务器。本演示已发布到上方链接。
 
 ## 简历描述示例
 
@@ -39,3 +41,4 @@
 演示版使用原生 HTML / CSS / JavaScript 和 SVG，所有资源使用相对路径，可部署到 GitHub Pages 项目子路径。无第三方运行时依赖。正式系统使用的 Python / Streamlit 后端、真实身份认证、Excel 替换、PDF生成以及外部模型通道不包含在此演示中。
 
 金额为含税模拟金额，已收款为开票记录的累计值；无真实到账流水、交期或到期日，不展示虚构的逾期率与准时交付率。
+
